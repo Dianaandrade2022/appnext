@@ -7,6 +7,10 @@ export default function Home() {
   dayjs().format()
   const fecha = dayjs();
   const fechaFormateada = fecha.format('DD-MM-YYYY');
+  const fechaNacimiento = dayjs('2002-06-11');
+  const edad = dayjs().diff(fechaNacimiento, 'year');
+
+
   function addtask(taskName) {
     if (!taskitem.find(res => res.name === taskName) ) {
       setTaskitem([...taskitem,{name:taskName, done:false, fechacreacion:fechaFormateada}])
@@ -32,6 +36,7 @@ export default function Home() {
         <thead>
           <tr>
             <th>Tarea</th>
+            <th>Fecha de creación</th>
           </tr>
         </thead>
         <tbody>
@@ -43,6 +48,11 @@ export default function Home() {
             ))}
         </tbody>
       </table>
+      </div>
+      <div className="uk-margin-top">
+      <h5>calculo de edad</h5>
+      <p>{edad}</p>
+
       </div>
     </div>
   );
