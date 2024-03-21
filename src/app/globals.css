@@ -1,3 +1,4 @@
+@import url('https://cdn.jsdelivr.net/npm/uikit@3.18.3/dist/css/uikit.min.css');
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
